@@ -2,12 +2,12 @@ from flask import Flask
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def index():
     return 'Index'
 
 
-@app.route('/posts/<post_id>')
+@app.route('/posts/<post_id>', methods=['GET'])
 def show_post(post_id):
     return 'Post ' + post_id
 
