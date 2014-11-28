@@ -3,7 +3,7 @@ from liberchan import app
 
 @app.route('/', methods=['GET'])
 def index():
-    return 'Index'
+    return app.send_static_file('index.html')
 
 
 @app.route('/<post_id>/', methods=['GET'])
